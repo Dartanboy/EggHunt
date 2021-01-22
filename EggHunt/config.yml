@@ -1,0 +1,17 @@
+# Configuration file for EggHunt by Dartanman
+# Make sure you do NOT put a / before any commands in the config.yml
+Messages:
+  NoPermission: '&cInsufficient permissions.'
+  GetEgg: '&aYou have been given an egg. Place it somewhere for Players to find.'
+  FoundEgg: '&aYou have found an egg! Total eggs found: {found}/{total}'
+  AlreadyFound: '&cYou already found that egg!'
+  CannotDestroy: '&cYou cannot destroy the eggs!'
+BroadcastWhenAllFound:
+  Enabled: true
+  Message: '&9[EggHunt] &6{player} &ahas found all of the eggs!'
+CommandRewardsForAllFound:
+  Enabled: true
+  Commands:
+    - 'give {player} diamond 1'
+    - 'tell {player} Congratulations!!!'
+    - 'tell {player} You can add as many rewards as you want in the config.yml'

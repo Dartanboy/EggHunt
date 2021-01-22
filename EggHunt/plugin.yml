@@ -1,0 +1,9 @@
+name: EggHunt
+version: 1.2.0
+api-version: 1.15
+author: Dartanman
+main: main.dartanman.egghunt.Main
+commands:
+   egghunt:
+     description: EggHunt Base Command
+     usage: /<command>
