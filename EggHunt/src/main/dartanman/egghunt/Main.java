@@ -127,7 +127,7 @@ public class Main extends JavaPlugin {
 	 *  The player to receive an Easter Egg
 	 */
 	public void giveEgg(Player player) {
-		player.sendMessage(ChatColor.GREEN + "You have been given an egg. Place it somewhere for players to find!");
+		player.sendMessage(ChatColor.translateAlternateColorCodes('&', getConfig().getString("Messages.GetEgg")));
 		ItemStack egg;
 		if (getMinecraftVersion() == 1.15) {
 			egg = SkullCreator.itemFromBase64(
@@ -138,9 +138,9 @@ public class Main extends JavaPlugin {
 		}
 		ItemMeta eggMeta = egg.getItemMeta();
 		SkullMeta skullMeta = (SkullMeta) eggMeta;
-		skullMeta.setDisplayName(ChatColor.LIGHT_PURPLE + "" + ChatColor.BOLD + "Easter Egg");
+		skullMeta.setDisplayName(ChatColor.translateAlternateColorCodes('&', getConfig().getString("EggInfo.EggName")));
 		List<String> lore = new ArrayList<>();
-		lore.add("Place this Egg somewhere for players to find!");
+		lore = getConfig().getStringList("EggInfo.EggLore");
 		skullMeta.setLore(lore);
 		egg.setItemMeta((ItemMeta) skullMeta);
 		player.getInventory().addItem(new ItemStack[] { egg });

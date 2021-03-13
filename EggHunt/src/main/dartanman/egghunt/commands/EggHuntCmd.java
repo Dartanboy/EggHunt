@@ -72,10 +72,12 @@ public class EggHuntCmd implements CommandExecutor {
 				this.plugin.giveEgg(player);
 				return true;
 			}
-			player.sendMessage(ChatColor.RED + "Invalid args. Try /egghunt help");
+			player.sendMessage(ChatColor.translateAlternateColorCodes('&',
+					this.plugin.getConfig().getString("Messages.InvalidArgs")));
 			return true;
 		}
-		player.sendMessage(ChatColor.RED + "Invalid args. Try /egghunt help");
+		player.sendMessage(ChatColor.translateAlternateColorCodes('&',
+				this.plugin.getConfig().getString("Messages.InvalidArgs")));
 		return true;
 	}
 }

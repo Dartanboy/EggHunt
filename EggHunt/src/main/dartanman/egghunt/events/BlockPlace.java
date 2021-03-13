@@ -54,7 +54,7 @@ public class BlockPlace implements Listener {
 			this.plugin.getEggDataFile().set("EggCount",
 					Integer.valueOf(this.plugin.getEggDataFile().getInt("EggCount") + 1));
 			this.plugin.saveEggDataFile();
-			player.sendMessage(ChatColor.GREEN + "Egg successfully added.");
+			player.sendMessage(ChatColor.translateAlternateColorCodes('&', plugin.getConfig().getString("Messages.SuccessfullyAdded")));
 		}
 	}
 }
