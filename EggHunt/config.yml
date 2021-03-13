@@ -6,6 +6,13 @@ Messages:
   FoundEgg: '&aYou have found an egg! Total eggs found: {found}/{total}'
   AlreadyFound: '&cYou already found that egg!'
   CannotDestroy: '&cYou cannot destroy the eggs!'
+  InvalidArgs: '&cInvalid args. Try /egghunt help'
+  SuccessfullyAdded: '&aEgg successfully added.'
+EggInfo:
+  EggName: '&d&lEaster Egg'
+  EggLore:
+    - '&aPlace this egg somewhere for Players to find!'
+    - '&aDon't make it too obvious, though. It shouldn't be easy!'
 BroadcastWhenAllFound:
   Enabled: true
   Message: '&9[EggHunt] &6{player} &ahas found all of the eggs!'
